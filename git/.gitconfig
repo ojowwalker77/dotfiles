@@ -1,0 +1,87 @@
+[user]
+	name = ojowwalker77
+	email = jonatasswwalker@gmail.com
+
+[core]
+	editor = nvim
+	pager = delta
+	excludesfile = ~/.gitignore_global
+
+[init]
+	defaultBranch = main
+
+[interactive]
+	diffFilter = delta --color-only
+
+[add.interactive]
+	useBuiltin = false
+
+[delta]
+	navigate = true
+	dark = true
+	side-by-side = true
+	line-numbers = true
+	syntax-theme = base16
+
+	# Obsidian theme
+	file-style = "#1DCD9F" bold
+	file-decoration-style = "#333333" ul
+	file-added-label = [+]
+	file-modified-label = [~]
+	file-removed-label = [-]
+
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#333333" box
+
+	line-numbers-left-style = "#555555"
+	line-numbers-right-style = "#555555"
+	line-numbers-minus-style = "#ff6b6b"
+	line-numbers-plus-style = "#1DCD9F"
+
+	minus-style = syntax "#0f0000"
+	minus-emph-style = syntax "#1a0505"
+	plus-style = syntax "#001a10"
+	plus-emph-style = syntax "#002a1a"
+
+	blame-palette = "#000000" "#0a0a0a" "#141414"
+	commit-decoration-style = "#1DCD9F" box
+	commit-style = "#ffffff"
+
+[merge]
+	conflictStyle = zdiff3
+
+[diff]
+	colorMoved = default
+	algorithm = histogram
+
+[pull]
+	rebase = true
+
+[push]
+	default = current
+	autoSetupRemote = true
+
+[fetch]
+	prune = true
+
+[rebase]
+	autoStash = true
+
+[alias]
+	st = status -sb
+	co = checkout
+	br = branch
+	ci = commit
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	lg = log --oneline --graph --decorate --all
+	amend = commit --amend --no-edit
+	undo = reset --soft HEAD~1
+	wip = !git add -A && git commit -m 'WIP'
+	unwip = reset HEAD~1
+
+[color]
+	ui = auto
+
+[credential]
+	helper = osxkeychain

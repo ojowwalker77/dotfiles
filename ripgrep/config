@@ -1,0 +1,12 @@
+# Ripgrep configuration
+--smart-case
+--hidden
+--glob=!.git/*
+--glob=!node_modules/*
+--glob=!.DS_Store
+--colors=line:fg:0x16:0x99:0x76
+--colors=line:style:nobold
+--colors=path:fg:0x1D:0xCD:0x9F
+--colors=path:style:bold
+--colors=match:fg:0xff:0x6b:0x6b
+--colors=match:style:bold

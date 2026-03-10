@@ -1,0 +1,76 @@
+# AeroSpace Config
+
+start-at-login = true
+
+[gaps]
+inner.horizontal = 10
+inner.vertical = 10
+outer.left = 10
+outer.bottom = 10
+outer.top = 10
+outer.right = 10
+
+# ─── Multi-Monitor: 1,2 on main | 3,4 on secondary ───
+[workspace-to-monitor-force-assignment]
+1 = 'main'
+2 = 'main'
+3 = 'secondary'
+4 = 'secondary'
+
+# ─── Window Rules ───
+[[on-window-detected]]
+if.app-name-regex-substring = 'Ghostty'
+run = 'move-node-to-workspace 1'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Safari'
+run = 'move-node-to-workspace 2'
+
+# ─── Keybindings ───
+[mode.main.binding]
+# Hyper + qwer = switch workspace
+cmd-alt-ctrl-shift-q = 'workspace 1'
+cmd-alt-ctrl-shift-w = 'workspace 2'
+cmd-alt-ctrl-shift-e = 'workspace 3'
+cmd-alt-ctrl-shift-r = 'workspace 4'
+
+# Hyper + asdf = move window to workspace
+cmd-alt-ctrl-shift-a = 'move-node-to-workspace 1'
+cmd-alt-ctrl-shift-s = 'move-node-to-workspace 2'
+cmd-alt-ctrl-shift-d = 'move-node-to-workspace 3'
+cmd-alt-ctrl-shift-f = 'move-node-to-workspace 4'
+
+# tmux prefix (keep as backup)
+ctrl-b = 'mode prefix'
+
+[mode.prefix.binding]
+# Switch workspace
+q = ['workspace 1', 'mode main']
+w = ['workspace 2', 'mode main']
+e = ['workspace 3', 'mode main']
+r = ['workspace 4', 'mode main']
+
+# Move window to workspace
+a = ['move-node-to-workspace 1', 'mode main']
+s = ['move-node-to-workspace 2', 'mode main']
+d = ['move-node-to-workspace 3', 'mode main']
+f = ['move-node-to-workspace 4', 'mode main']
+
+# Focus window
+h = ['focus left', 'mode main']
+j = ['focus down', 'mode main']
+k = ['focus up', 'mode main']
+l = ['focus right', 'mode main']
+
+# Move window
+shift-h = ['move left', 'mode main']
+shift-j = ['move down', 'mode main']
+shift-k = ['move up', 'mode main']
+shift-l = ['move right', 'mode main']
+
+# Layout
+t = ['layout floating tiling', 'mode main']
+m = ['fullscreen', 'mode main']
+
+# Cancel prefix
+ctrl-c = 'mode main'

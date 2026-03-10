@@ -1,0 +1,134 @@
+# =============================================================================
+# GHOSTTY - Minimal Black
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# FONT
+# -----------------------------------------------------------------------------
+font-family = "JetBrainsMono Nerd Font"
+font-size = 14
+font-thicken = true
+font-feature = -liga
+adjust-cell-height = 15%
+
+# -----------------------------------------------------------------------------
+# COLORS - Obsidian (Black + White + Green)
+# -----------------------------------------------------------------------------
+background = 000000
+foreground = ffffff
+
+# Cursor
+cursor-color = 1DCD9F
+cursor-text = 000000
+
+# Selection
+selection-background = 1DCD9F44
+selection-foreground = ffffff
+
+# Black
+palette = 0=#222222
+palette = 8=#555555
+
+# Red
+palette = 1=#ff6b6b
+palette = 9=#ff8a8a
+
+# Green
+palette = 2=#1DCD9F
+palette = 10=#4de8be
+
+# Yellow
+palette = 3=#ffc107
+palette = 11=#ffd54f
+
+# Blue (green tones)
+palette = 4=#1DCD9F
+palette = 12=#4de8be
+
+# Magenta (teal)
+palette = 5=#169976
+palette = 13=#1DCD9F
+
+# Cyan
+palette = 6=#1DCD9F
+palette = 14=#4de8be
+
+# White
+palette = 7=#cccccc
+palette = 15=#ffffff
+
+# -----------------------------------------------------------------------------
+# WINDOW - Clean & Minimal
+# -----------------------------------------------------------------------------
+background-opacity = 1
+window-padding-x = 16
+window-padding-y = 12,0
+window-padding-color = background
+
+window-decoration = true
+macos-titlebar-style = tabs
+window-show-tab-bar = true
+
+window-width = 120
+window-height = 35
+window-save-state = always
+
+# -----------------------------------------------------------------------------
+# CURSOR
+# -----------------------------------------------------------------------------
+cursor-style = bar
+cursor-style-blink = false
+
+# -----------------------------------------------------------------------------
+# SHELL
+# -----------------------------------------------------------------------------
+shell-integration = zsh
+shell-integration-features = cursor,sudo,title
+
+# -----------------------------------------------------------------------------
+# MACOS
+# -----------------------------------------------------------------------------
+macos-option-as-alt = true
+
+# -----------------------------------------------------------------------------
+# SCROLLBACK (lower = better performance)
+# -----------------------------------------------------------------------------
+scrollback-limit = 10000
+
+# -----------------------------------------------------------------------------
+# MOUSE
+# -----------------------------------------------------------------------------
+mouse-hide-while-typing = true
+copy-on-select = clipboard
+
+# -----------------------------------------------------------------------------
+# PERFORMANCE & BEHAVIOR
+# -----------------------------------------------------------------------------
+confirm-close-surface = false
+focus-follows-mouse = true
+
+# -----------------------------------------------------------------------------
+# KEYBINDINGS
+# -----------------------------------------------------------------------------
+keybind = super+d=new_split:right
+keybind = super+shift+d=new_split:down
+keybind = super+alt+left=goto_split:left
+keybind = super+alt+right=goto_split:right
+keybind = super+alt+up=goto_split:top
+keybind = super+alt+down=goto_split:bottom
+keybind = super+w=close_surface
+keybind = super+t=new_tab
+keybind = super+n=new_window
+keybind = super+plus=increase_font_size:1
+keybind = super+minus=decrease_font_size:1
+keybind = super+0=reset_font_size
+keybind = super+k=clear_screen
+keybind = global:super+grave_accent=toggle_quick_terminal
+
+# -----------------------------------------------------------------------------
+# QUICK TERMINAL
+# -----------------------------------------------------------------------------
+quick-terminal-position = top
+quick-terminal-screen = main
+quick-terminal-animation-duration = 0.12
+keybind = shift+enter=text:\x1b\r
