@@ -27,7 +27,7 @@ if ! command -v brew &>/dev/null; then
 fi
 
 info "Installing Homebrew packages..."
-brew bundle --file="$DOTFILES/Brewfile" --no-lock
+brew bundle --file="$DOTFILES/Brewfile"
 
 # ─── Shell ───
 link "$DOTFILES/zsh/.zshrc"     "$HOME/.zshrc"
@@ -49,43 +49,6 @@ link "$DOTFILES/tmux/remote.conf" "$HOME/.config/tmux/remote.conf"
 
 # ─── Aerospace ───
 link "$DOTFILES/aerospace/.aerospace.toml" "$HOME/.aerospace.toml"
-
-# ─── Zed ───
-mkdir -p "$HOME/.config/zed/themes"
-link "$DOTFILES/zed/settings.json" "$HOME/.config/zed/settings.json"
-link "$DOTFILES/zed/keymap.json"   "$HOME/.config/zed/keymap.json"
-link "$DOTFILES/zed/themes/obsidian.json" "$HOME/.config/zed/themes/obsidian.json"
-
-# ─── Neovim ───
-mkdir -p "$HOME/.config/nvim/lua/pilot/actions" "$HOME/.config/nvim/lua/pilot/ui"
-link "$DOTFILES/nvim/init.lua"                      "$HOME/.config/nvim/init.lua"
-link "$DOTFILES/nvim/lua/pilot/init.lua"             "$HOME/.config/nvim/lua/pilot/init.lua"
-link "$DOTFILES/nvim/lua/pilot/openrouter.lua"       "$HOME/.config/nvim/lua/pilot/openrouter.lua"
-link "$DOTFILES/nvim/lua/pilot/actions/lookup.lua"   "$HOME/.config/nvim/lua/pilot/actions/lookup.lua"
-link "$DOTFILES/nvim/lua/pilot/ui/float.lua"         "$HOME/.config/nvim/lua/pilot/ui/float.lua"
-
-# ─── Oh My Posh ───
-mkdir -p "$HOME/.config/ohmyposh"
-link "$DOTFILES/ohmyposh/config.toml" "$HOME/.config/ohmyposh/config.toml"
-
-# ─── Starship ───
-link "$DOTFILES/starship/starship.toml" "$HOME/.config/starship.toml"
-
-# ─── Lazygit ───
-mkdir -p "$HOME/.config/lazygit"
-link "$DOTFILES/lazygit/config.yml" "$HOME/.config/lazygit/config.yml"
-
-# ─── Ripgrep ───
-mkdir -p "$HOME/.config/ripgrep"
-link "$DOTFILES/ripgrep/config" "$HOME/.config/ripgrep/config"
-
-# ─── Eza ───
-mkdir -p "$HOME/.config/eza"
-link "$DOTFILES/eza/theme.yml" "$HOME/.config/eza/theme.yml"
-
-# ─── Barik ───
-mkdir -p "$HOME/.config/barik"
-link "$DOTFILES/barik/config.toml" "$HOME/.config/barik/config.toml"
 
 # ─── Make tmux scripts executable ───
 chmod +x "$DOTFILES"/tmux/*.sh

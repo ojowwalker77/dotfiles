@@ -1,76 +1,90 @@
-tap "asmvik/formulae"
-tap "charmbracelet/tap"
-tap "felixkratz/formulae"
-tap "jayadamsmorgan/yatoro"
-tap "koekeishiya/formulae"
+tap "851-labs/tap"
+tap "asmvik/formulae", "https://github.com/asmvik/homebrew-formulae.git"
 tap "nikitabobko/tap"
-tap "ojowwalker77/barik"
-tap "ojowwalker77/cookinn-notch"
-tap "ojowwalker77/tmuxify"
 tap "oven-sh/bun"
-tap "tw93/tap"
-tap "withgraphite/tap"
-brew "astroterm"
+tap "russmckendrick/tap", trusted: { casks: ["tokenuse-desktop"] }
+# Plugin manager for zsh, inspired by antigen and antibody
+brew "antidote"
+# Fast, lightweight CLI for App Store Connect
+brew "asc"
+# Improved shell history for zsh, bash, fish and nushell
+brew "atuin"
+# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Resource monitor. C++ version and continuation of bashtop and bpytop
+brew "btop"
+# Multi-shell multi-command argument completer
+brew "carapace"
+# Object-file caching compiler wrapper
+brew "ccache"
+# Cross-platform make
 brew "cmake"
-brew "deno"
+# Dependency manager for Cocoa projects
+brew "cocoapods"
+# Container runtimes on MacOS (and Linux) with minimal setup
+brew "colima"
+# Load/unload environment variables based on $PWD
+brew "direnv"
+# Pack, ship and run any application as a lightweight container
+brew "docker"
+# Isolated development environments using Docker
+brew "docker-compose"
+# Modern, maintained replacement for ls
 brew "eza"
-brew "fd"
+# Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
+# Command-line fuzzy finder written in Go
 brew "fzf"
-brew "node"
-brew "gemini-cli"
+# GitHub command-line tool
 brew "gh"
-brew "git-delta"
-brew "go"
-brew "httping"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Simple terminal UI for git commands
 brew "lazygit"
-brew "neovim"
-brew "nmap"
-brew "oh-my-posh"
+# Deep clean and optimize your Mac
+brew "mole"
+# Small build system for use with gyp or CMake
+brew "ninja"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
+# Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# AI coding agent, built for the terminal
 brew "opencode"
-brew "osx-cpu-temp"
-brew "pandoc"
-brew "pkgconf"
-brew "python@3.12"
-brew "rust"
+# PDF rendering library (based on the xpdf-3.0 code base)
+brew "poppler"
+# Fast and accurate code counter with complexity and COCOMO estimates
 brew "scc"
-brew "slides"
+# Cross-shell prompt for astronauts
 brew "starship"
-brew "switchaudio-osx"
-brew "terraform"
-brew "terraformer"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
+# Terminal multiplexer
 brew "tmux"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
+# Convert HTML to PDF
 brew "weasyprint"
+# Generate your Xcode project from a spec file and your folder structure
 brew "xcodegen"
-brew "yazi"
-brew "zig"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
+brew "yq"
+# Shell extension to navigate your filesystem faster
 brew "zoxide"
-brew "charmbracelet/tap/crush"
-brew "jayadamsmorgan/yatoro/yatoro"
-brew "ojowwalker77/tmuxify/tmuxify"
-brew "tw93/tap/mole"
-brew "withgraphite/tap/graphite"
-cask "nikitabobko/tap/aerospace"
-cask "ojowwalker77/barik/barik"
-cask "claude"
-cask "claude-code"
-cask "clickup"
+# UNIX shell (command interpreter)
+brew "zsh"
+# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
+brew "oven-sh/bun/bun", trusted: true
+# AeroSpace is an i3-like tiling window manager for macOS
+cask "nikitabobko/tap/aerospace", trusted: true
+# Terminal-based AI coding assistant
+cask "claude-code@latest"
+# OpenAI's coding agent that runs in your terminal
 cask "codex"
-cask "ojowwalker77/cookinn-notch/cookinn-notch"
-cask "copilot-cli"
-cask "font-hack-nerd-font"
+cask "font-dejavu-sans"
 cask "font-jetbrains-mono-nerd-font"
-cask "font-source-code-pro"
+# Set of tools to manage resources and applications hosted on Google Cloud
 cask "gcloud-cli"
+# Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
-cask "hammerspoon"
-cask "kiro-cli"
-cask "macfuse"
-cask "orbstack"
-cask "raycast"
-cask "warp"
-cargo "cleanmac"
-cargo "crystal-clear"
-cargo "finder"
+uv "uv"
