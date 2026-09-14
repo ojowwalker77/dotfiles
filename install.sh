@@ -45,6 +45,7 @@ mkdir -p "$HOME/.config/tmux"
 for f in "$DOTFILES"/tmux/*.sh; do
     link "$f" "$HOME/.config/tmux/$(basename "$f")"
 done
+link "$DOTFILES/tmux/remote.conf" "$HOME/.config/tmux/remote.conf"
 
 # ─── Aerospace ───
 link "$DOTFILES/aerospace/.aerospace.toml" "$HOME/.aerospace.toml"
