@@ -88,3 +88,10 @@ cask "gcloud-cli"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
 uv "uv"
+# Fish-shell-like autosuggestions for zsh
+brew "zsh-autosuggestions"
+# Additional completion definitions for zsh
+brew "zsh-completions"
+# Feature-rich syntax highlighting for zsh
+brew "zsh-fast-syntax-highlighting"
+cask "font-geist-mono"

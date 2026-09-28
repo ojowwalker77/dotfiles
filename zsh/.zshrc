@@ -14,7 +14,19 @@ autoload -Uz add-zsh-hook
 _blank_line() { (( ${+_prompt_started} )) && print; _prompt_started=1 }
 add-zsh-hook precmd _blank_line
 
+# Shell basics
+setopt INTERACTIVE_COMMENTS AUTO_CD HIST_IGNORE_SPACE
+bindkey -e
+
+# Completions
+fpath=(/opt/homebrew/share/zsh-completions $fpath)
+autoload -Uz compinit && compinit -C
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+# Grey suggestions from history as you type (→ to accept)
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
+
 eval "$(zoxide init zsh)"
 eval "$(atuin init zsh)"
 eval "$(direnv hook zsh)"
@@ -73,5 +85,5 @@ export PATH="/Users/jow/.greenrun/bin:$PATH"
 # kimi-code
 export PATH="/Users/jow/.kimi-code/bin:$PATH"
 
-[[ ":$PATH:" != *":$HOME/.config/kaku/zsh/bin:"* ]] && export PATH="$HOME/.config/kaku/zsh/bin:$PATH" # Kaku PATH Integration
-[[ -f "$HOME/.config/kaku/zsh/kaku.zsh" ]] && source "$HOME/.config/kaku/zsh/kaku.zsh" # Kaku Shell Integration
+# Command highlighting (keep last)
+source /opt/homebrew/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
