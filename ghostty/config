@@ -1,14 +1,33 @@
-# Managed by Termstack — macOS / Ghostty
-font-family = "JetBrainsMono Nerd Font"
-font-size = 16
-window-padding-x = 6
-window-padding-y = 6
+# Graphite
+font-family = "Geist Mono"
+font-size = 14
+adjust-cell-height = 35%
+window-padding-x = 18
+window-padding-y = 16
+window-padding-balance = true
 background-opacity = 1.00
-background = #000000
-foreground = #dededb
-cursor-color = #b7eb62
-selection-background = #343432
-selection-foreground = #f2f2ed
+background = #19191B
+foreground = #D5D5D0
+cursor-color = #E9E9E4
+selection-background = #323236
+selection-foreground = #F2F2EE
+unfocused-split-opacity = 0.8
+palette = 0=#232326
+palette = 1=#D08472
+palette = 2=#A5B58D
+palette = 3=#D8BB7E
+palette = 4=#90A6CA
+palette = 5=#BA9DC4
+palette = 6=#8FBBB5
+palette = 7=#D5D5D0
+palette = 8=#66666C
+palette = 9=#E09A89
+palette = 10=#B7C6A0
+palette = 11=#E5CB93
+palette = 12=#A6B9DA
+palette = 13=#CBB1D4
+palette = 14=#A4CEC8
+palette = 15=#F2F2EE
 window-decoration = auto
 macos-titlebar-style = tabs
 macos-option-as-alt = true
