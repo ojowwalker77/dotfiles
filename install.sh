@@ -39,6 +39,9 @@ link "$DOTFILES/git/.gitconfig" "$HOME/.gitconfig"
 # ─── Ghostty ───
 link "$DOTFILES/ghostty/config" "$HOME/.config/ghostty/config"
 
+# ─── Zed ───
+link "$DOTFILES/zed/settings.json" "$HOME/.config/zed/settings.json"
+
 # ─── Tmux ───
 link "$DOTFILES/tmux/.tmux.conf" "$HOME/.tmux.conf"
 mkdir -p "$HOME/.config/tmux"
