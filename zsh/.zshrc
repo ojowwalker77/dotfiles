@@ -7,7 +7,12 @@ SAVEHIST=50000
 setopt HIST_IGNORE_ALL_DUPS SHARE_HISTORY
 
 # Prompt: just an arrow (red after a failed command), with a blank line
-# before each prompt except the first. The folder shows in the tab title.
+# before each prompt except the first. The folder shows in the tmux status
+# and Ghostty tab title (OSC 7 / title). Integration is not auto-loaded
+# inside tmux, so source it here.
+if [[ -n $GHOSTTY_RESOURCES_DIR ]]; then
+  source "$GHOSTTY_RESOURCES_DIR"/shell-integration/zsh/ghostty-integration
+fi
 setopt PROMPT_SUBST
 PROMPT='%(?.%F{4}.%F{1})→%f '
 autoload -Uz add-zsh-hook
