@@ -87,3 +87,12 @@ export PATH="/Users/jow/.kimi-code/bin:$PATH"
 
 # Command highlighting (keep last)
 source /opt/homebrew/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+
+# kiwi
+export PATH="$HOME/.kiwi/bin:$PATH"
+
+# >>> grok installer >>>
+export PATH="$HOME/.grok/bin:$PATH"
+fpath=(~/.grok/completions/zsh $fpath)
+autoload -Uz compinit && compinit -C
+# <<< grok installer <<<
