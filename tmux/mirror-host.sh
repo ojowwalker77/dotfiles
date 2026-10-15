@@ -26,6 +26,7 @@ case $cmd in
   pane)   tmux select-pane "-$2" -t "$1" ;;
   resize) tmux resize-pane "-$2" -t "$1" 5 ;;
   kill)   tmux kill-pane -t "$1" ;;
+  killwin) tmux kill-window -t "$1" ;;
   new)    ensure; tmux new-window -d -P -F '#{window_id}' -t "=$S:" -c "$(path_of "$1")" ;;
   rename) tmux rename-window -t "$1" "$2" ;;
   *)      echo "usage: mirror-host.sh list|attach|split|pane|resize|kill|new|rename" >&2; exit 2 ;;
