@@ -37,9 +37,8 @@ No prefix: every binding is Hyper (CapsLock mapped to Ctrl+Option+Shift) plus a 
 | Hyper `i` / `o` / `[`   | session picker / rename / new session |
 | Hyper `r`               | reload config                       |
 
-The status bar shows the window list on the left (each window named after
-its current folder) and CPU temperature (`cpu-temp.sh`) and disk usage
-(`stats.sh`) on the right. Ghostty's tab title is the same folder.
+The status bar shows the window list on the left and CPU temperature
+(`cpu-temp.sh`) and disk usage (`stats.sh`) on the right.
 
 ### Remote windows
 
