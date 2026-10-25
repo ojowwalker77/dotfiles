@@ -21,6 +21,11 @@ config into place (an existing file is moved to `<name>.bak` first).
 | `tmux/*.sh`, `tmux/remote.conf` | `~/.config/tmux/`        |
 | `aerospace/.aerospace.toml` | `~/.aerospace.toml`          |
 
+## Wallpapers
+
+Desktop images live in `wallpapers/`. They are kept in the repo but nothing
+links or installs them; set one by hand in System Settings → Wallpaper.
+
 ## tmux
 
 No prefix: every binding is Hyper (CapsLock mapped to Ctrl+Option+Shift) plus a key.
